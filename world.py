@@ -34,10 +34,19 @@ def INIT():
     sim.addWall(2, 6, 2, 7, color="black")
     sim.addWall(0.2, 7, 0.2, 0, color="black")
     
-    # sim.addBox(0, 4, 1, 5, "blue", wallcolor="blue")
-    # sim.addBox(2.5, 0, 2.6, 2.5, "green", wallcolor="green")
-    # sim.addBox(2.5, 2.5, 3.9, 2.6, "green", wallcolor="green")
-
+    sim.addWall(4.5, 7, 5, 6.2, color="black")
+    sim.addWall(5, 6.2, 6, 6, color="black")
+    sim.addWall(6, 6, 6, 5.8, color="black")
+    sim.addWall(6, 5.8, 5.5, 5.8, color="black")
+    sim.addWall(5.5, 5.8, 5.4, 5.2, color="black")
+    sim.addWall(5.4, 5.2, 6.3, 2.1, color="black")
+    sim.addWall(6.3, 2.1, 5.6, 1.2, color="black")
+    sim.addWall(5.6, 1.2, 5.6, 0.8, color="black")
+    sim.addWall(5.6, 0.8, 6, 0.4, color="black")
+    sim.addWall(6, 0.4, 6, 0, color="black")
+    sim.addWall(6, 0, 7, 0, color="black")
+    sim.addWall(0, 7, 7, 7, color="black")
+    sim.addWall(7, 7, 4.5, 7, color="black")
     
     # port, name, x, y, th, bounding Xs, bounding Ys, color
     # (optional TK color name):
