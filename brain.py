@@ -34,8 +34,8 @@ from pyrobot.brain import Brain
 class Controller(Brain):  
            
    # Give the front two sensors, decide the next move  
-   def determineMove(self, sonar0, sonar2):
-      if sonar2 < 0.4:
+   def determineMove(self, sonar0, sonar2, front):
+      if front < 0.3 or sonar2 < 0.4:
          # Turn right
          return(0, -.3)
       elif sonar0 < 0.29:
@@ -51,8 +51,9 @@ class Controller(Brain):
    def step(self):  
       sonar0 = self.robot.sonar[0][0].value
       sonar2 = self.robot.sonar[0][2].value
+      front = min([s.distance() for s in self.robot.range["front"]])
       
-      translation, rotate = self.determineMove(sonar0, sonar2)  
+      translation, rotate = self.determineMove(sonar0, sonar2, front)  
       self.robot.move(translation, rotate)
 
 def INIT(engine):  
