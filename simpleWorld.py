@@ -21,7 +21,7 @@ def INIT():
                       TkScale)
     
     # x1, y1, x2, y2 in meters:
-    sim.addBox(0, 0, 7, 7)
+    sim.addBox(0, 0, 20, 20)
 
     # sim.addWall(2, 0, 2, 4, color="black")
     # sim.addWall(2, 4, 1, 4, color="black")
